@@ -92,7 +92,7 @@ class App(customtkinter.CTk):
     # отрисовка результатов оценки данных на экране
     def render_result (self, data):
         # преобразуем список вероятностей для вывода в процентах
-        probabilities = list(map(lambda count: count * 100, data["probabilities"]))
+        probabilities = list(map(lambda probability: probability * 100, data["probabilities"]))
 
         # отрисовываем на канвасе график
         self.plot_ax.clear()
