@@ -17,7 +17,7 @@ class App(customtkinter.CTk):
         # формируем окно
         self.title(msg.APP_TITLE)
         self.geometry(f"{1100}x{580}")
-        self.state('zoomed')
+        self.state("zoomed")
 
         # формируем макет (2x2)
         self.grid_columnconfigure(0, weight=0)
@@ -105,12 +105,12 @@ class App(customtkinter.CTk):
         self.empty_dialog_text.grid_remove()
 
         # устанавливаем значения текстовых узлов
-        self.statistic_data_text_length.configure(text = msg.MESSAGE_LENGTH_LABEL + str(data['text_length']))
-        self.statistic_data_alphabet_length.configure(text = msg.ALPHABET_LENGTH_LABEL + str(data['alphabet_length']))
-        self.statistic_data_h_max.configure(text = msg.MAX_ENTROPY_LABEL + str(data['h_max']))
-        self.statistic_data_h_real.configure(text = msg.REAL_ENTROPY_LABEL + str(data['h_real']))
-        self.statistic_data_r_abs.configure(text = msg.ABSOLUTE_REDUNDANCY + str(data['r_abs']))
-        self.statistic_data_r_rel.configure(text = msg.RELATIVE_REDUNDANCY + str(data['r_rel']))
+        self.statistic_data_text_length.configure(text = msg.MESSAGE_LENGTH_LABEL + str(data["text_length"]))
+        self.statistic_data_alphabet_length.configure(text = msg.ALPHABET_LENGTH_LABEL + str(data["alphabet_length"]))
+        self.statistic_data_h_max.configure(text = msg.MAX_ENTROPY_LABEL + str(data["h_max"]))
+        self.statistic_data_h_real.configure(text = msg.REAL_ENTROPY_LABEL + str(data["h_real"]))
+        self.statistic_data_r_abs.configure(text = msg.ABSOLUTE_REDUNDANCY + str(data["r_abs"]))
+        self.statistic_data_r_rel.configure(text = msg.RELATIVE_REDUNDANCY + str(data["r_rel"]))
         self.statistic_data_s_max.configure(text = f'{msg.SYMBOL_MOST_SELF_INFO_LABEL}"{str(data["s_max"][0])}" = {str(data["s_max"][1])}')
         self.statistic_data_s_min.configure(text = f'{msg.SYMBOL_LEAST_SELF_INFO_LABEL}"{str(data["s_min"][0])}" = {str(data["s_min"][1])}')
 

@@ -4,7 +4,7 @@ from functools import reduce
 # метод получения оценки статистических данных
 def get_statistical_characteristics (filename):
     # открываем файл
-    file = open(filename, 'r', encoding='utf8')
+    file = open(filename, "r", encoding="utf8")
 
     # получаем текст файла в виде строки
     text = file.read()
